@@ -1,0 +1,35 @@
+<ul class="list-group navigation-list-group">
+  <li
+    class="list-group-item"
+    (click)="itemClicked('aboutMeClicked')"
+    [ngStyle]="{ color: pageMode === 0 ? '#007bff' : '' }"
+  >
+    <span class="nav-icon-description">About</span>
+
+    <span class="fa fa-user nav-icon"> </span>
+  </li>
+  <li
+    class="list-group-item align-items-center"
+    (click)="itemClicked('resumeClicked')"
+    [ngStyle]="{ color: pageMode === 1 ? '#007bff' : '' }"
+  >
+    <span class="fa fa-clipboard nav-icon"></span>
+    <span class="nav-icon-description">Resume</span>
+  </li>
+  <li
+    class="list-group-item"
+    (click)="itemClicked('worksClicked')"
+    [ngStyle]="{ color: pageMode === 2 ? '#007bff' : '' }"
+  >
+    <i class="fa fa-edit nav-icon"></i>
+    <span class="nav-icon-description">Works</span>
+  </li>
+  <li
+    class="list-group-item"
+    (click)="itemClicked('contactClicked')"
+    [ngStyle]="{ color: pageMode === 4 ? '#007bff' : '' }"
+  >
+    <i class="fa fa-phone nav-icon"></i>
+    <span class="nav-icon-description">Contact</span>
+  </li>
+</ul>

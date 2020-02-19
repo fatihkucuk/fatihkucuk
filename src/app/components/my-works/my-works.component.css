@@ -1,0 +1,27 @@
+img{
+    position: relative;
+    height: auto;
+    /* width: 259px !important; */
+    height: 181px !important;
+    width: 100% !important;
+}
+
+.test .image-icon{
+    position: absolute !important;
+    margin: -16px 0 0 -16px !important;
+    left: 48% !important;
+    top: 40% !important;
+    width: 32px !important;
+    height: 32px !important;
+    color: #007bff;
+    font-size: 40px
+}
+
+.img-desc{
+    background-color: white !important;
+    padding: 5px;
+    height: 70px;
+    border: 1px solid #e9e9e9;
+    border-top: 0;
+    border-radius: 0px 0px 15px 15px;
+}

@@ -1,0 +1,23 @@
+.dashboard-container {
+    padding-top: 80px !important;
+    overflow: hidden;
+}
+
+.profile {
+    z-index: 999;
+    padding-bottom: 30px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        margin-left: 0 !important;
+        z-index: 1;
+    }
+    .profile {
+        margin-top: 10px !important;
+    }
+}
+
+.content-body {
+    background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%);
+}

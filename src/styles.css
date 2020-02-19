@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(13, 0, 36, 1) 0%,
+    rgba(9, 49, 121, 1) 59%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.margin-t-10 {
+  margin-top: 10px !important;
+}
+
+.margin-t-15 {
+  margin-top: 15px !important;
+}
+
+.margin-t-20 {
+  margin-top: 20px !important;
+}
+
+.margin-t-30 {
+  margin-top: 30px !important;
+}
+.margin-b-0 {
+  margin-bottom: 0 !important;
+}
+
+.description {
+  color: #7a7a7a !important;
+}
+
+.right-container {
+  background-color: white;
+  padding: 30px 35px !important;
+  /* box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12); */
+  height: 504.04px;
+  overflow-y: auto;
+  border-radius: 5px;
+  margin-top: 13px;
+}
+
+@media only screen and (min-width: 600px) {
+  .right-container {
+    height: 454.04px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation {
+    position: fixed !important;
+    top: 0%;
+    z-index: 9999;
+    opacity: 93%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .right-container {
+    height: 457.04px;
+  }
+  .navigation-list-group {
+    width: 60px !important;
+  }
+  .content {
+    margin-left: -45px !important;
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .right-container {
+    height: 500.04px;
+  }
+  body {
+    overflow-y: hidden;
+  }
+  .content {
+    margin-left: -45px !important;
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .right-container {
+    height: 475.04px;
+  }
+  body {
+    overflow-y: hidden;
+  }
+  .navigation-list-group {
+    width: 82px !important;
+  }
+  .content {
+    margin-left: -45px !important;
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .right-container {
+    height: 504.04px;
+  }
+  body {
+    overflow-y: hidden;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}

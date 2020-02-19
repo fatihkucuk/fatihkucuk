@@ -1,0 +1,151 @@
+<div class=" container right-container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="title">
+        <h3>
+          <i class="fa fa-graduation-cap"></i> EDUCATION
+        </h3>
+      </div>
+      <hr>
+      <div class="row" *ngFor="let education of educations">
+        <div class="col-md-12">
+          <ul>
+            <li>
+              {{ education?.year }}
+              <div class="row border border-top-0 border-bottom-0 border-right-0">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        {{education?.schoolName}}
+                        <p style="color: #7a7a7a">
+                          <i>{{education?.city}}</i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        {{education?.description}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="title" style="margin-top: 20px">
+        <h3>
+          <i class="fa fa-desktop"></i> COMPUTER SKILLS
+        </h3>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <h6 class="text-center">Main Skills</h6>
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let computerSkill of computerSkillModel?.mainSkills">
+                {{ computerSkill }}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <h6 class="text-center">Helper Skills</h6>
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let computerSkill of computerSkillModel?.helperSkills">
+                {{ computerSkill }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="title">
+        <h3>
+          <i class="fa fa-briefcase"></i> WORK EXPERIENCES
+        </h3>
+      </div>
+      <hr>
+      <div class="row" *ngFor="let workExperience of workExperiences; let i = index">
+        <div class="col-md-12">
+          <ul>
+            <li>
+              <span [ngClass]="{'active-work': i === 0 ? true : false}">{{workExperience?.year}}</span>
+              <div class="row border border-top-0 border-bottom-0 border-right-0">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-12">
+                      {{workExperience?.companyName}}
+                      <p style="color: #7a7a7a">
+                        <i>İstanbul</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      {{workExperience?.description}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row margin-t-20">
+    <div class="col-md-12">
+      <div class="title">
+        <h3>
+          <i class="fa fa-graduation-cap"></i> PROJECTS
+        </h3>
+      </div>
+      <hr>
+      <div class="row" *ngFor="let project of projects; let i = index">
+        <div class="col-md-12">
+          <ul>
+            <li>
+              {{project?.projectName}}
+              <div class="row border border-top-0 border-bottom-0 border-right-0">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p style="color: #7a7a7a">
+                        <i>
+                          <u> Used Technologies:</u> {{project?.usedTechnologies}}</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div *ngIf ="i !== 1"class="row">
+                    <div class="col-md-12">
+                      <ng-template [ngIf]="i !== 0">
+                      <a [attr.href]="project?.link">Click to see details</a>
+                    </ng-template>
+                    <ng-template [ngIf]="i === 0">
+                        <a routerLink="/dashboard/my-works">Click to see details</a>
+                    </ng-template>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

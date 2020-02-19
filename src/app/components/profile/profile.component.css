@@ -1,0 +1,84 @@
+.portfolio-thumbnail {
+    /* margin-top: 25px; */
+    background-color: white;
+    /* padding: 0 0 71px 0; */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.portfolio-thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.image {
+    border: 1px solid black;
+    border-radius: 5%;
+    margin: 0 0 20px 0;
+    position: relative;
+    display: inline-block;
+    width: 140px;
+}
+
+.user {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-top: -30px;
+}
+
+.one {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/resume-web-site.appspot.com/o/0.jpg?alt=media&token=90663675-eb9d-498e-9b33-228d7a0ed6ba');
+}
+
+.profile-name {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 0px;
+}
+
+.profile-title {
+    margin-bottom: 0px;
+    color: #007bff;
+}
+
+.social-media-icons {
+    font-size: 20px;
+}
+
+.social-media-icons :hover {
+    color: orange;
+    zoom: 130% !important;
+}
+
+.actions {
+    border-top: 1px solid gainsboro;
+}
+
+.actions .action-button:nth-last-child(1) {
+    border-right: none !important;
+}
+
+.action-button {
+    width: 50% !important;
+    border-radius: 0 !important;
+    height: 70px !important;
+    background-color: white;
+    border-right: 1px solid gainsboro;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.action-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.action-button:hover {
+    color: #007bff
+}

@@ -1,0 +1,16 @@
+<div class="container dashboard-container">
+  <div class="row">
+    <div class="col-md-1  navigation">
+      <app-navigation-bar
+        [(pageMode)]="pageMode"
+        (onPageModeChanged)="getPageMode($event)"
+      ></app-navigation-bar>
+    </div>
+    <div class="col-md-4 profile">
+      <app-profile (onPageModeChanged)="getPageMode($event)"></app-profile>
+    </div>
+    <div class="col-md-7 content" [@routerTransition]="getState(o)">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </div>
+</div>

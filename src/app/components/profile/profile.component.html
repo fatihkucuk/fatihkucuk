@@ -1,0 +1,53 @@
+<div class="portfolio-thumbnail text-center">
+  <img
+    src="../../../assets/my-works-images/Full-Stack-Developer.jpg"
+    alt="image not found"
+    width="400"
+    height="300"
+  />
+  <div class="user one"></div>
+  <h4 class="profile-name">
+    <strong>
+      {{ profileModel?.name }}
+    </strong>
+  </h4>
+  <p class="profile-title">
+    {{ profileModel?.title }}
+  </p>
+  <p>
+    <i class="profile-company">
+      {{ profileModel?.company }}
+    </i>
+  </p>
+  <ul class="list-inline">
+    <li class="list-inline-item">
+      <a
+        [attr.href]="profileModel?.linkedin"
+        class="social-media-icons"
+        matTooltip="Linkedin"
+        matTooltipPosition="above"
+      >
+        <i class="fa fa-linkedin-square"></i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a
+        [attr.href]="profileModel?.github"
+        class="social-media-icons"
+        matTooltip="GitHub"
+        matTooltipPosition="above"
+      >
+        <i class="fa fa-github"></i>
+      </a>
+    </li>
+  </ul>
+  <div class="actions">
+    <button class="btn btn-default action-button" (click)="downloadCvClicked()">
+      Download CV
+      <span class="fa fa-download"></span>
+    </button>
+    <button class="btn btn-default action-button" (click)="contactMeClicked()">
+      Contact Me
+    </button>
+  </div>
+</div>
