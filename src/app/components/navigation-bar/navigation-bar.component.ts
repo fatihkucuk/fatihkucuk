@@ -1,87 +1,54 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { Router, ActivatedRoute } from '../../../../node_modules/@angular/router';
-
-enum PageMode {
-  NONE = -1,
-  aboutMe = 0,
-  resume = 1,
-  works = 2,
-  blog = 3,
-  contact = 4
-}
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
+import {
+  Router,
+  NavigationEnd
+} from "../../../../node_modules/@angular/router";
+import { PageMode } from "src/app/enums/PageMode";
 
 @Component({
-  selector: 'app-navigation-bar',
-  templateUrl: './navigation-bar.component.html',
-  styleUrls: ['./navigation-bar.component.css']
+  selector: "app-navigation-bar",
+  templateUrl: "./navigation-bar.component.html",
+  styleUrls: ["./navigation-bar.component.css"]
 })
 export class NavigationBarComponent implements OnInit {
-  @Output() onPageModeChanged = new EventEmitter<PageMode>();
-  @Input() pageMode: PageMode = PageMode.aboutMe;
-  param: string = '';
+  pageMode: PageMode = PageMode.AboutMe;
 
-  constructor(private router: Router,
-    private route: ActivatedRoute) { }
-
-  ngOnInit() {
-    this.pageMode = PageMode.aboutMe;
-    if (this.router) {
-      if (this.router.url === '/dashboard/about-me') {
-        this.pageMode = PageMode.aboutMe;
-      } else if (this.router.url === '/dashboard/my-resume') {
-        this.pageMode = PageMode.resume;
-      } else if (this.router.url === '/dashboard/my-works') {
-        this.pageMode = PageMode.works;
-      } else if (this.router.url === '/dashboard/about-me') {
-        this.pageMode = PageMode.contact;
+  constructor(private router: Router) {
+    router.events.subscribe(navigationEvent => {
+      if (navigationEvent instanceof NavigationEnd) {
+        const url = navigationEvent.url;
+        if (url) {
+          if (url === "/dashboard/about-me") {
+            this.pageMode = PageMode.AboutMe;
+          } else if (url === "/dashboard/my-resume") {
+            this.pageMode = PageMode.Resume;
+          } else if (url === "/dashboard/my-works") {
+            this.pageMode = PageMode.Works;
+          } else if (url === "/dashboard/contact") {
+            this.pageMode = PageMode.Contact;
+          }
+        }
       }
-    }
+    });
   }
 
-  itemClicked(clicked) {
-    if (clicked) {
+  ngOnInit() {}
 
-      if (clicked === 'aboutMeClicked') {
-        this.pageMode = PageMode.aboutMe;
-        /* this.onPageModeChanged.emit(this.pageMode); */
-        this.scrollBottom();
-
-        this.router.navigateByUrl('dashboard/about-me', { replaceUrl: true })
+  itemClicked(clickedItem) {
+    if (clickedItem) {
+      if (clickedItem === "aboutMeClicked") {
+        this.router.navigateByUrl("dashboard/about-me", { replaceUrl: true });
       }
-      if (clicked === 'resumeClicked') {
-        this.pageMode = PageMode.resume;
-        /*         this.onPageModeChanged.emit(this.pageMode); */
-        this.scrollBottom();
-
-        this.router.navigateByUrl('dashboard/my-resume', { replaceUrl: true })
-
+      if (clickedItem === "resumeClicked") {
+        this.router.navigateByUrl("dashboard/my-resume", { replaceUrl: true });
       }
-      if (clicked === 'worksClicked') {
-        this.pageMode = PageMode.works;
-
-        /*                 this.onPageModeChanged.emit(this.pageMode);  */
-
-        this.router.navigateByUrl('dashboard/my-works', { replaceUrl: true })
-        this.scrollBottom();
-
-
-
+      if (clickedItem === "worksClicked") {
+        this.router.navigateByUrl("dashboard/my-works", { replaceUrl: true });
       }
-      if (clicked === 'blogClicked') {
-
-        this.scrollBottom();
-        this.pageMode = PageMode.blog;
-        this.onPageModeChanged.emit(this.pageMode);
-
+      if (clickedItem === "contactClicked") {
+        this.router.navigateByUrl("dashboard/contact", { replaceUrl: true });
       }
-      if (clicked === 'contactClicked') {
-        this.pageMode = PageMode.contact;
-        this.onPageModeChanged.emit(this.pageMode);
-        this.router.navigateByUrl('dashboard/about-me', { replaceUrl: true })
-
-        this.scrollBottom();
-
-      }
+      this.scrollBottom();
     }
   }
 
