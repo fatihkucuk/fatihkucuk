@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 body {
   background: linear-gradient(
     90deg,
@@ -33,7 +32,6 @@ body {
 .right-container {
   background-color: white;
   padding: 30px 35px !important;
-  /* box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12); */
   height: 504.04px;
   overflow-y: auto;
   border-radius: 5px;
@@ -52,6 +50,8 @@ body {
     top: 0%;
     z-index: 9999;
     opacity: 93%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 }
 
@@ -60,13 +60,25 @@ body {
     height: 457.04px;
   }
   .navigation-list-group {
-    width: 60px !important;
+    width: 61px !important;
   }
   .content {
     margin-left: -45px !important;
     z-index: 1;
   }
 }
+
+/* @media only screen and (max-width: 768px) {
+  .navigation-list-group {
+    width: 61px !important;
+  }
+} */
+
+/* @media only screen and (max-width: 992px) {
+  .navigation-list-group {
+    width: 81px !important;
+  }
+} */
 
 @media only screen and (min-width: 992px) {
   .right-container {

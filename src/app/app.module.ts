@@ -16,6 +16,7 @@ import { MyWorksPopUpComponent } from './components/my-works-pop-up/my-works-pop
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { CommonModule } from '../../node_modules/@angular/common';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ResumeComponent,
     MyWorksComponent,
     MyWorksPopUpComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
