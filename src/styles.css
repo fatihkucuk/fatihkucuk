@@ -57,7 +57,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .right-container {
-    height: 457.04px;
+    height: 439.04px;
   }
   .navigation-list-group {
     width: 61px !important;
@@ -82,7 +82,7 @@ body {
 
 @media only screen and (min-width: 992px) {
   .right-container {
-    height: 500.04px;
+    height: 483.04px;
   }
   body {
     overflow-y: hidden;
@@ -95,7 +95,7 @@ body {
 
 @media only screen and (min-width: 1024px) {
   .right-container {
-    height: 475.04px;
+    height: 483.04px;
   }
   body {
     overflow-y: hidden;
@@ -109,9 +109,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .right-container {
+    height: 517.04px;
+  }
+}
+
 @media only screen and (min-width: 1536px) {
   .right-container {
-    height: 504.04px;
+    height: 517.04px;
   }
   body {
     overflow-y: hidden;
