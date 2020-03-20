@@ -48,8 +48,12 @@ export class NavigationBarComponent implements OnInit {
       if (clickedItem === "contactClicked") {
         this.router.navigateByUrl("dashboard/contact", { replaceUrl: true });
       }
-      this.scrollBottom();
+      if (this.isMobileDevice()) this.scrollBottom();
     }
+  }
+
+  isMobileDevice() {
+    return window.screen.width <= 767;
   }
 
   scrollBottom() {

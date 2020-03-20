@@ -1,23 +1,29 @@
 .dashboard-container {
-  padding-top: 80px !important;
+  margin: 30px auto;
   overflow: hidden;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .profile {
   z-index: 999;
-  padding-bottom: 30px !important;
 }
 
 .content-body {
   background: linear-gradient(to bottom right, #50a3a2 0%, #2eca7f 100%);
 }
 
-@media only screen and (max-width: 600px) {
-  .content {
-    margin-left: 0 !important;
-    z-index: 1;
-  }
+@media only screen and (min-width: 768px) {
   .profile {
-    margin-top: 10px !important;
+    margin-left: -20px;
+  }
+
+  .content {
+    margin-left: -40px;
   }
 }

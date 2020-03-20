@@ -1,4 +1,8 @@
+html,
 body {
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
   background: linear-gradient(
     90deg,
     rgba(13, 0, 36, 1) 0%,
@@ -6,6 +10,7 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
 }
+
 .margin-t-10 {
   margin-top: 10px !important;
 }
@@ -38,97 +43,40 @@ body {
   margin-top: 13px;
 }
 
-@media only screen and (min-width: 600px) {
-  .right-container {
-    height: 454.04px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .navigation {
-    position: fixed !important;
-    top: 0%;
-    z-index: 9999;
-    opacity: 93%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-}
-
 @media only screen and (min-width: 768px) {
   .right-container {
-    height: 439.04px;
+    height: 474px;
   }
-  .navigation-list-group {
-    width: 61px !important;
-  }
-  .content {
-    margin-left: -45px !important;
-    z-index: 1;
+
+  body {
+    overflow: hidden !important;
   }
 }
-
-/* @media only screen and (max-width: 768px) {
-  .navigation-list-group {
-    width: 61px !important;
-  }
-} */
-
-/* @media only screen and (max-width: 992px) {
-  .navigation-list-group {
-    width: 81px !important;
-  }
-} */
 
 @media only screen and (min-width: 992px) {
   .right-container {
-    height: 483.04px;
+    height: 485px;
   }
-  body {
-    overflow-y: hidden;
-  }
-  .content {
-    margin-left: -45px !important;
-    z-index: 1;
-  }
-}
 
-@media only screen and (min-width: 1024px) {
-  .right-container {
-    height: 483.04px;
-  }
-  body {
-    overflow-y: hidden;
-  }
   .navigation-list-group {
-    width: 82px !important;
+    width: 75%;
   }
-  .content {
-    margin-left: -45px !important;
-    z-index: 1;
+
+  .profile {
+    margin-left: -50px !important;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .right-container {
-    height: 517.04px;
+    height: 518px;
   }
-}
 
-@media only screen and (min-width: 1536px) {
-  .right-container {
-    height: 517.04px;
+  .navigation-list-group {
+    width: 115%;
   }
-  body {
-    overflow-y: hidden;
-  }
-}
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
+  .profile {
+    margin-left: -20px !important;
+  }
 }
