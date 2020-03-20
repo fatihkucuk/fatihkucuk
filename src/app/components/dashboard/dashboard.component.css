@@ -1,5 +1,4 @@
 .dashboard-container {
-  margin: 30px auto;
   overflow: hidden;
 }
 
@@ -25,5 +24,12 @@
 
   .content {
     margin-left: -40px;
+  }
+
+  .dashboard-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
