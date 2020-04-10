@@ -11,7 +11,7 @@ export class ProfileComponent implements OnInit {
   profileModel = new ProfileModel();
   downloadURL: string;
   cvLink: string =
-    "https://firebasestorage.googleapis.com/v0/b/resume-web-site.appspot.com/o/FATIH_KUCUK_38884682074_CV%20(1)-d%C3%B6n%C3%BC%C5%9Ft%C3%BCr%C3%BCld%C3%BC.pdf?alt=media&token=4daaa54b-38f3-49b3-a4c0-d2be5a737702";
+    "https://firebasestorage.googleapis.com/v0/b/resume-web-site.appspot.com/o/FATIH_KUCUK_38884682074_CV%20(1)-d%C3%B6n%C3%BC%C5%9Ft%C3%BCr%C3%BCld%C3%BC.pdf?alt=media&token=46bd9620-82cb-453a-9ee6-fddec7051a5a";
   cvHovered: boolean = false;
   contactMeHovered: boolean = false;
   constructor(private router: Router) {}
