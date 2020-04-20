@@ -9,7 +9,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: "app-resume",
   templateUrl: "./resume.component.html",
-  styleUrls: ["./resume.component.css"]
+  styleUrls: ["./resume.component.css"],
 })
 export class ResumeComponent implements OnInit {
   mainComputerSkills = [
@@ -30,7 +30,7 @@ export class ResumeComponent implements OnInit {
     "Microservice Architecture",
     "Postman",
     "Git",
-    "SourceTree"
+    "SourceTree",
   ];
 
   educations = new Array<EducationModel>();
@@ -106,7 +106,7 @@ export class ResumeComponent implements OnInit {
 
     this.projectModel.projectName = "Huawei ISDP Workorder project";
     this.projectModel.usedTechnologies = "Vue.js, Aurora UI, JAVA-Spring Boot";
-    this.projectModel.link = "http://www.fatihkucuk.blog/dashboard/my-works";
+    this.projectModel.link = "http://www.fatihkucuk.blog/my-works";
     this.projectModel.hasOutsourceLink = false;
 
     this.projects.push(_.cloneDeep(this.projectModel));
@@ -115,7 +115,7 @@ export class ResumeComponent implements OnInit {
       "Real Estate Management Project for Rönesans Gayrimenkul Yatırım A.Ş";
     this.projectModel.usedTechnologies =
       "Angular 2, Bootstrap, Angular Material, .NET C# Web API 2, MS-SQL";
-    this.projectModel.link = "http://www.fatihkucuk.blog/dashboard/my-works";
+    this.projectModel.link = "http://www.fatihkucuk.blog/my-works";
     this.projectModel.hasOutsourceLink = false;
 
     this.projects.push(_.cloneDeep(this.projectModel));

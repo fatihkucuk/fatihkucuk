@@ -10,12 +10,12 @@ import { NotFoundComponent } from "./components/not-found/not-found.component";
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "/dashboard/about-me",
+    redirectTo: "/about-me",
     pathMatch: "full",
-    data: { state: "dashboard/about-me" },
+    data: { state: "/about-me" },
   },
   {
-    path: "dashboard",
+    path: "",
     component: DashboardComponent,
     children: [
       { path: "", pathMatch: "full", redirectTo: "about-me" },

@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit {
   }
 
   contactMeClicked() {
-    this.router.navigateByUrl("dashboard/contact", { replaceUrl: true });
+    this.router.navigateByUrl("contact", { replaceUrl: true });
   }
 
   downloadCvClicked() {
