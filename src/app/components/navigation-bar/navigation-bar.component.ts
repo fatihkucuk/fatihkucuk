@@ -42,9 +42,6 @@ export class NavigationBarComponent implements OnInit {
       if (clickedItem === "resumeClicked") {
         this.router.navigateByUrl("dashboard/my-resume", { replaceUrl: true });
       }
-      if (clickedItem === "worksClicked") {
-        this.router.navigateByUrl("dashboard/my-works", { replaceUrl: true });
-      }
       if (clickedItem === "contactClicked") {
         this.router.navigateByUrl("dashboard/contact", { replaceUrl: true });
       }
